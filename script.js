@@ -1,38 +1,21 @@
-'use strict';
-//let arr = ["plum.png", "orange.jpg", "apple.jpg"]
+let money = prompt("Ваш бюджет на месяц?", ''),
+	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-//alert('Hello world!');
+let appData = {
+	budget: money,
+	expenses: {},
+	optionalExpenses: {},
+	income: [],
+	timeData: time,
+	savings: false
+};
 
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a2 = prompt("Во сколько обойдется?", ''),
+	a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+	a4 = prompt("Во сколько обойдется?", '');
 
-// let answer = confirm("Are you here");
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
 
-// console.log(answer);
-
-//let answer = prompt("Do you have 18", "Yes");
-
-//console.log(typeof(answer));
-
-// let incr = 10, 
-    // decr = 10;
-    // incr++;
-    // decr--;
-    // console.log(incr);
-    // console.log(decr);
-
-// let isChecked = true,
-//     isClose = true;
-
-//  console.log(isChecked && isClose);
-
-    //alert("Привет это моя первая страница");
-
-//     let luda = "world",
-//     	kolya = "100";
-//     let result = '';	
-// alert(result);
-// console.log(typeof([]));
-// console.log(2 ** 3 ** 2);
-var s = 'mystring';
-for (var i = 0; i < s.length; i++) {
- console.log(s.charAt(i));
-}
+alert(appData.budget / 30);
